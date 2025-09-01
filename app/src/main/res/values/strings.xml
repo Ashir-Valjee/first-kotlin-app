@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Composable Exercise 1</string>
+    <string name="button_label">Click Me</string>
 </resources>
