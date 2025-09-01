@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composableexercise1.ui.theme.ComposableExercise1Theme
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.stringResource
 import org.intellij.lang.annotations.JdkConstants
 
 class MainActivity : ComponentActivity() {
@@ -73,6 +75,18 @@ fun MovieQuote(quote: String, movieName: String, modifier: Modifier = Modifier) 
                 text = movieName,
                 modifier = modifier.fillMaxWidth(),
                 textAlign = TextAlign.End
+            )
+        }
+        Button(
+            onClick = {
+            println("Button was clicked!")
+        },
+            modifier= Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(top = 20.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.button_label)
             )
         }
         Image(
